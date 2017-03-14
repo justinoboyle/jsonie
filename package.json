@@ -1,6 +1,6 @@
 {
   "name": "jsonie",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple JSON parser for the command line.",
   "main": "entry.js",
   "main-build": "build/index.js",
@@ -11,8 +11,7 @@
     "build": "npm run clean; babel -d ./build ./src -s",
     "postinstall": "postinstall-build build \"npm run build\"",
     "dev": "ENV=dev babel-watch src/index.js",
-    "gen-packages": "node scripts/gen-packages.js",
-    "prepublish": "npm run gen-packages; git add packages; git commit -m \"Update packages.\"; git push"
+    "gen-packages": "node scripts/gen-packages.js"
   },
   "author": "justinoboyle",
   "license": "MIT",
