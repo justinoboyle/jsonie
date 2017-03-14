@@ -1,0 +1,17 @@
+
+# Maintainer: justinoboyle
+
+pkgname=jsonie
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="A simple JSON parser for the command line."
+arch=('i686' 'x86_64')
+url="https://github.com/justinoboyle/jsonie"
+license=('MIT')
+depends=('nodejs', 'npm')
+makedepends=('nodejs', 'npm')
+noextract=()
+
+build() {
+    npm install -g jsonie@1.0.0 --no-progress --quiet
+}

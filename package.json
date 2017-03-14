@@ -1,0 +1,37 @@
+{
+  "name": "jsonie",
+  "version": "1.0.0",
+  "description": "A simple JSON parser for the command line.",
+  "main": "entry.js",
+  "main-build": "build/index.js",
+  "main-src": "src/index.js",
+  "homepage": "https://github.com/justinoboyle/jsonie",
+  "scripts": {
+    "clean": "rm -rf ./build && mkdir build",
+    "build": "npm run clean; babel -d ./build ./src -s",
+    "postinstall": "postinstall-build build \"npm run build\"",
+    "dev": "ENV=dev babel-watch src/index.js",
+    "gen-packages": "node scripts/gen-packages.js",
+    "prepublish": "npm run gen-packages"
+  },
+  "author": "justinoboyle",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-watch": "^2.0.5"
+  },
+  "dependencies": {
+    "js-md5": "^0.4.2",
+    "postinstall-build": "^2.1.3",
+    "promise": "^7.1.1"
+  },
+  "distrib": {
+    "arch": {
+      "arch": "'i686' 'x86_64'",
+      "packager": "manual"
+    }
+  }
+}
