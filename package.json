@@ -12,7 +12,7 @@
     "postinstall": "postinstall-build build \"npm run build\"",
     "dev": "ENV=dev babel-watch src/index.js",
     "gen-packages": "node scripts/gen-packages.js",
-    "prepublish": "npm run gen-packages"
+    "prepublish": "npm run gen-packages; git add packages; git commit -m \"Update packages.\"; git push"
   },
   "author": "justinoboyle",
   "license": "MIT",
