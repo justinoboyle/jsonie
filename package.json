@@ -1,6 +1,6 @@
 {
   "name": "jsonie",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple JSON parser for the command line.",
   "main": "entry.js",
   "main-build": "build/index.js",
